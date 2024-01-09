@@ -1,11 +1,13 @@
 package com.myblog.myblog1;
 
+import jakarta.persistence.criteria.CriteriaBuilder;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-
+import java.util.function.Function;
 public class TestClass1 {
     public static void main(String[] args) {
 
@@ -46,6 +48,16 @@ public class TestClass1 {
         //System.out.println(data1);
         //System.out.println(data2);
         //System.out.println(data3);
+
+        // Funtion FunctionalInterface
+
+       // Function<String,Integer> result = str->str.length();
+       // Integer val = result.apply("mike");
+       // System.out.println(val);
+
+        Function<Integer,Integer> result = i->i+10;
+        Integer val = result.apply(30);
+        System.out.println(val);
 
 
     }
