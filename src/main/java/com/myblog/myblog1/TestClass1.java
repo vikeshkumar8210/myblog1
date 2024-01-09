@@ -71,8 +71,14 @@ public class TestClass1 {
 
         //Sorting the data
 
-        List<String> data = Arrays.asList("mike", "stallin", "adam");
-        List<String> newData = data.stream().sorted().collect(Collectors.toList());
+        //List<String> data = Arrays.asList("mike", "stallin", "adam");
+        //List<String> newData = data.stream().sorted().collect(Collectors.toList());
+        //System.out.println(newData);
+
+        // Sorting the IntergerData
+
+        List<Integer> data = Arrays.asList(15, 4, 45, 78, 36);
+        List<Integer> newData = data.stream().sorted().collect(Collectors.toList());
         System.out.println(newData);
 
 
