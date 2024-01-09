@@ -59,9 +59,21 @@ public class TestClass1 {
         //Integer val = result.apply(30);
         //System.out.println(val);
 
-        List<Integer> data = Arrays.asList(10, 20, 30, 41);
-        List<Integer> newNumbers = data.stream().map(i -> i + 10).collect(Collectors.toList());
-        System.out.println(newNumbers);
+        //List<Integer> data = Arrays.asList(10, 20, 30, 41);
+        //List<Integer> newNumbers = data.stream().map(i -> i + 10).collect(Collectors.toList());
+        //System.out.println(newNumbers);
+
+        //Convert a name into UpperCase Letter
+
+        //List<String> data = Arrays.asList("mike", "stallin", "adam");
+        //List<String> newData = data.stream().map(i -> i.toUpperCase()).collect(Collectors.toList());
+        //System.out.println(newData);
+
+        //Sorting the data
+
+        List<String> data = Arrays.asList("mike", "stallin", "adam");
+        List<String> newData = data.stream().sorted().collect(Collectors.toList());
+        System.out.println(newData);
 
 
     }
