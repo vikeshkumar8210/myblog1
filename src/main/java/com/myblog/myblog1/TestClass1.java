@@ -77,8 +77,14 @@ public class TestClass1 {
 
         // Sorting the IntergerData
 
-        List<Integer> data = Arrays.asList(15, 4, 45, 78, 36);
-        List<Integer> newData = data.stream().sorted().collect(Collectors.toList());
+        //List<Integer> data = Arrays.asList(15, 4, 45, 78, 36);
+        //List<Integer> newData = data.stream().sorted().collect(Collectors.toList());
+        //System.out.println(newData);
+
+        // Sorting the and Removing the Depulicate  values
+
+        List<Integer> data = Arrays.asList(15, 3, 60, 100, 45, 3, 60, 78);
+        List<Integer> newData = data.stream().distinct().collect(Collectors.toList());
         System.out.println(newData);
 
 
