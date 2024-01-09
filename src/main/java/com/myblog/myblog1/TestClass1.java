@@ -55,9 +55,13 @@ public class TestClass1 {
        // Integer val = result.apply("mike");
        // System.out.println(val);
 
-        Function<Integer,Integer> result = i->i+10;
-        Integer val = result.apply(30);
-        System.out.println(val);
+        //Function<Integer,Integer> result = i->i+10;
+        //Integer val = result.apply(30);
+        //System.out.println(val);
+
+        List<Integer> data = Arrays.asList(10, 20, 30, 41);
+        List<Integer> newNumbers = data.stream().map(i -> i + 10).collect(Collectors.toList());
+        System.out.println(newNumbers);
 
 
     }
