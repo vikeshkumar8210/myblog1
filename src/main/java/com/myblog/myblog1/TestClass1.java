@@ -5,6 +5,7 @@ import jakarta.persistence.criteria.CriteriaBuilder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.function.Function;
@@ -83,9 +84,15 @@ public class TestClass1 {
 
         // Sorting the and Removing the Depulicate  values
 
-        List<Integer> data = Arrays.asList(15, 3, 60, 100, 45, 3, 60, 78);
-        List<Integer> newData = data.stream().distinct().collect(Collectors.toList());
-        System.out.println(newData);
+        //List<Integer> data = Arrays.asList(15, 3, 60, 100, 45, 3, 60, 78);
+        //List<Integer> newData = data.stream().distinct().collect(Collectors.toList());
+        //System.out.println(newData);
+
+
+        // Consumer FunctionalInterface it takes input but produces no output.
+
+        Consumer<Integer> result = number-> System.out.println(number);
+        result.accept(100);
 
 
     }
