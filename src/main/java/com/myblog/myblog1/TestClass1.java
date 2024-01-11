@@ -91,8 +91,14 @@ public class TestClass1 {
 
         // Consumer FunctionalInterface it takes input but produces no output.
 
-        Consumer<Integer> result = number-> System.out.println(number);
-        result.accept(100);
+        //Consumer<Integer> result = number-> System.out.println(number);
+        //result.accept(100);
+
+        // Consumer(forEach) example
+
+        List<String> names = Arrays.asList("mike", "adam", "sam");
+        Consumer<String> val = name-> System.out.println(name);
+        names.forEach(val);
 
 
     }
