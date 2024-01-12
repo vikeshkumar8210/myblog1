@@ -1,6 +1,7 @@
 package com.myblog.myblog1;
 
-import java.util.ArrayList;
+import ch.qos.logback.core.net.SyslogOutputStream;
+
 import java.util.Arrays;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -50,9 +51,9 @@ public class TestClass1 {
 
         // Funtion FunctionalInterface
 
-       // Function<String,Integer> result = str->str.length();
-       // Integer val = result.apply("mike");
-       // System.out.println(val);
+        // Function<String,Integer> result = str->str.length();
+        // Integer val = result.apply("mike");
+        // System.out.println(val);
 
         //Function<Integer,Integer> result = i->i+10;
         //Integer val = result.apply(30);
@@ -98,22 +99,23 @@ public class TestClass1 {
         //Consumer<String> val = name-> System.out.println(name);
         //names.forEach(val);
 
-        List<Login>logins=Arrays.asList(
-                new Login("mike","testing"),
-                new Login("stallin","testing"),
-                new Login("adam","testing")
+        List<Employee> emplyees = Arrays.asList(
+                new Employee("mike", 30, "chennai"),
+                new Employee("stallin", 25, "chennai"),
+                new Employee("adam", 31, "pune"),
+                new Employee("sam", 32, "bengaluru")
+
+
         );
 
-        List<LoginDto> dtos = logins.stream().map(login -> mapToDto(login)).collect(Collectors.toList());
-        System.out.println(dtos);
+        List<Employee> emps = emplyees.stream().filter(emp -> emp.getAge() > 30).collect(Collectors.toList());
 
-    }
+        for (Employee e:emps){
+            System.out.println(e.getName());
+            System.out.println(e.getAge());
+            System.out.println(e.getCity());
+        }
 
-    static LoginDto mapToDto(Login login){
 
-        LoginDto dto = new LoginDto();
-        dto.setUserName(login.getUserName());
-        dto.setPassword(login.getPassword());
-        return dto;
     }
 }
