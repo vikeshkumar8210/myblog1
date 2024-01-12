@@ -99,22 +99,30 @@ public class TestClass1 {
         //Consumer<String> val = name-> System.out.println(name);
         //names.forEach(val);
 
-        List<Employee> emplyees = Arrays.asList(
-                new Employee("mike", 30, "chennai"),
-                new Employee("stallin", 25, "chennai"),
-                new Employee("adam", 31, "pune"),
-                new Employee("sam", 32, "bengaluru")
+//        List<Employee> emplyees = Arrays.asList(
+//                new Employee("mike", 30, "chennai"),
+//                new Employee("stallin", 25, "chennai"),
+//                new Employee("adam", 31, "pune"),
+//                new Employee("sam", 32, "bengaluru")
+//
+//
+//        );
+//
+//        List<Employee> emps = emplyees.stream().filter(emp -> emp.getAge() > 30).collect(Collectors.toList());
+//
+//        for (Employee e:emps){
+//            System.out.println(e.getName());
+//            System.out.println(e.getAge());
+//            System.out.println(e.getCity());
+//        }
 
 
-        );
 
-        List<Employee> emps = emplyees.stream().filter(emp -> emp.getAge() > 30).collect(Collectors.toList());
+        //To filter out even numbers, square each of them, and find the sum of the squared
 
-        for (Employee e:emps){
-            System.out.println(e.getName());
-            System.out.println(e.getAge());
-            System.out.println(e.getCity());
-        }
+        List<Integer> numbers = Arrays.asList(10,12,6,5,7,8,9);
+        List<Integer> data = numbers.stream().filter(n1->n1%2==0).map(n2->n2*n2).collect(Collectors.toList());
+        System.out.println(data);
 
 
     }
