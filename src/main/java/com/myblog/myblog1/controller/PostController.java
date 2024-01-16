@@ -26,9 +26,9 @@ public class PostController {
 
     }
 
-    // http://localhost:8080/api/posts?id=1
+    // http://localhost:8080/api/posts/particular?id=1
 
-    @GetMapping
+    @GetMapping("/particular")
     public ResponseEntity<PostDto> getPostById(@RequestParam long id){
 
         PostDto dto = postService.getPostById(id);
@@ -38,6 +38,7 @@ public class PostController {
     @GetMapping
     public List<PostDto>  getAllPosts(){
         List<PostDto> postDtos = postService.getAllPosts();
+        return postDtos;
 
     }
 
