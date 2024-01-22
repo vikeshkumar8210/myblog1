@@ -24,13 +24,13 @@ public class TestClass {
 
         //Debugging in list;
 //        List<Integer> data = Arrays.asList(10, 20, 45, 78, 45, 12, 78, 20, 30, 10);
-//        List<Integer> val = data.stream().filter(i -> i % 2 == 0).collect(Collectors.toList());
+//        List<Integer> val = data.stream().filter(i -> i % 2 == 0).distinct().collect(Collectors.toList());
 //        System.out.println(val);
         
         //Debugging in list with distinc/ unique value
-        List<Integer> data = Arrays.asList(10, 20, 45, 78, 45, 12, 78, 20, 30, 10);
-        List<Integer> val = data.stream().distinct().collect(Collectors.toList());
-        System.out.println(val);
+//        List<Integer> data = Arrays.asList(10, 20, 45, 78, 45, 12, 78, 20, 30, 10);
+//        List<Integer> val = data.stream().distinct().collect(Collectors.toList());
+//        System.out.println(val);
     }
 }
 
