@@ -23,6 +23,36 @@ public class Comment {
     @JoinColumn(name = "post_id")
     private Post post;
 
+    public long getId() {
+        return id;
+    }
 
-    // Add other fields as needed
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Post getPost() {
+        return post;
+    }
+
+    public void setPost(Post post) {
+        this.post = post;
+    }
+// Add other fields as needed
 }
