@@ -44,4 +44,11 @@ public class CommentServiceImpl implements CommentService {
         commentRepository.deleteById(id);
 
     }
+
+    @Override
+    public void updateComment(long id, CommentDto commentDto) {
+        Comment comment = commentRepository.findById(id).orElseThrow(
+                () -> new ResourceNotFoundException("Comment not found for Id:" + id)
+        );
+    }
 }
