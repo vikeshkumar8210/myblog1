@@ -38,4 +38,10 @@ public class CommentServiceImpl implements CommentService {
         dto.setText(savedComment.getText());
         return dto;
     }
+
+    @Override
+    public void deleteComment(long id) {
+        commentRepository.deleteById(id);
+
+    }
 }
