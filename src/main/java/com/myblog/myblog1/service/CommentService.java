@@ -9,5 +9,5 @@ public interface CommentService {
     void deleteComment(long id);
 
 
-    void updateComment(long id, CommentDto commentDto);
+    CommentDto updateComment(long id, CommentDto commentDto, long postId);
 }
